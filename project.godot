@@ -1,0 +1,232 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "GameCoin",
+"language": "GDScript",
+"path": "res://Scenes/Coin.gd"
+}, {
+"base": "Area2D",
+"class": "GameFuel",
+"language": "GDScript",
+"path": "res://Scenes/Fuel.gd"
+}, {
+"base": "Node2D",
+"class": "GameLevel",
+"language": "GDScript",
+"path": "res://Levels/Level.gd"
+}, {
+"base": "RigidBody2D",
+"class": "GamePlayer",
+"language": "GDScript",
+"path": "res://Scenes/Player.gd"
+}, {
+"base": "RigidBody2D",
+"class": "GameWheel",
+"language": "GDScript",
+"path": "res://Scenes/Wheel.gd"
+}, {
+"base": "Resource",
+"class": "RMS2D_Material",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/RMSmartShapeMaterial.gd"
+}, {
+"base": "Reference",
+"class": "RMS2D_VertexProperties",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/LEGACY_vertex_properties.gd"
+}, {
+"base": "Reference",
+"class": "RMS2D_VertexPropertiesArray",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/LEGACY_vertex_properties_array.gd"
+}, {
+"base": "Node2D",
+"class": "RMSmartShape2D",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/RMSmartShape2D.gd"
+}, {
+"base": "Node2D",
+"class": "RMSmartShapeAnchor2D",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/RMSmartShapeAnchor2D.gd"
+}, {
+"base": "Node",
+"class": "SS2D_Common_Functions",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/common_functions.gd"
+}, {
+"base": "Reference",
+"class": "SS2D_Edge",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/shapes/edge.gd"
+}, {
+"base": "Resource",
+"class": "SS2D_Material_Edge",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/materials/edge_material.gd"
+}, {
+"base": "Resource",
+"class": "SS2D_Material_Edge_Metadata",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/materials/edge_material_metadata.gd"
+}, {
+"base": "Resource",
+"class": "SS2D_Material_Shape",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/materials/shape_material.gd"
+}, {
+"base": "Reference",
+"class": "SS2D_Mesh",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/shapes/mesh.gd"
+}, {
+"base": "Resource",
+"class": "SS2D_NormalRange",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/normal_range.gd"
+}, {
+"base": "VBoxContainer",
+"class": "SS2D_NormalRangeEditor",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/editors/NormalRangeEditor/NormalRangeEditor.gd"
+}, {
+"base": "EditorProperty",
+"class": "SS2D_NormalRangeEditorProperty",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/editors/NormalRangeEditor/NormalRangeEditorProperty.gd"
+}, {
+"base": "Resource",
+"class": "SS2D_Point",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/shapes/point.gd"
+}, {
+"base": "Resource",
+"class": "SS2D_Point_Array",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/shapes/point_array.gd"
+}, {
+"base": "Reference",
+"class": "SS2D_Quad",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/shapes/quad.gd"
+}, {
+"base": "Node2D",
+"class": "SS2D_Shape_Anchor",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/shapes/shape_anchor.gd"
+}, {
+"base": "Node2D",
+"class": "SS2D_Shape_Base",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/shapes/shape_base.gd"
+}, {
+"base": "SS2D_Shape_Base",
+"class": "SS2D_Shape_Closed",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/shapes/shape_closed.gd"
+}, {
+"base": "Node2D",
+"class": "SS2D_Shape_Combine_Union",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/shapes/shape_combine_union.gd"
+}, {
+"base": "SS2D_Shape_Base",
+"class": "SS2D_Shape_Meta",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/shapes/shape_meta.gd"
+}, {
+"base": "SS2D_Shape_Base",
+"class": "SS2D_Shape_Open",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/shapes/shape_open.gd"
+}, {
+"base": "Node2D",
+"class": "SS2D_Shape_Render",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/shapes/shape_render.gd"
+}, {
+"base": "Resource",
+"class": "SS2D_Strings",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/strings.gd"
+}, {
+"base": "Resource",
+"class": "SS2D_VertexProperties",
+"language": "GDScript",
+"path": "res://addons/rmsmartshape/vertex_properties.gd"
+} ]
+_global_script_class_icons={
+"GameCoin": "res://Images/Pickups/Coin5.png",
+"GameFuel": "res://Images/Pickups/Fuel.png",
+"GameLevel": "",
+"GamePlayer": "res://Images/Car/RedCar.png",
+"GameWheel": "res://Images/Car/Wheel.png",
+"RMS2D_Material": "",
+"RMS2D_VertexProperties": "",
+"RMS2D_VertexPropertiesArray": "",
+"RMSmartShape2D": "res://addons/rmsmartshape/assets/LEGACY_shape.png",
+"RMSmartShapeAnchor2D": "res://addons/rmsmartshape/assets/LEGACY_shape_anchor.png",
+"SS2D_Common_Functions": "",
+"SS2D_Edge": "",
+"SS2D_Material_Edge": "",
+"SS2D_Material_Edge_Metadata": "",
+"SS2D_Material_Shape": "",
+"SS2D_Mesh": "",
+"SS2D_NormalRange": "",
+"SS2D_NormalRangeEditor": "",
+"SS2D_NormalRangeEditorProperty": "",
+"SS2D_Point": "",
+"SS2D_Point_Array": "",
+"SS2D_Quad": "",
+"SS2D_Shape_Anchor": "res://addons/rmsmartshape/assets/Anchor.svg",
+"SS2D_Shape_Base": "",
+"SS2D_Shape_Closed": "res://addons/rmsmartshape/assets/closed_shape.png",
+"SS2D_Shape_Combine_Union": "",
+"SS2D_Shape_Meta": "res://addons/rmsmartshape/assets/meta_shape.png",
+"SS2D_Shape_Open": "res://addons/rmsmartshape/assets/open_shape.png",
+"SS2D_Shape_Render": "",
+"SS2D_Strings": "",
+"SS2D_VertexProperties": ""
+}
+
+[application]
+
+config/name="Hill Climb Racing"
+run/main_scene="res://Levels/Level1.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/stretch/mode="2d"
+window/stretch/aspect="keep_height"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/rmsmartshape/plugin.cfg" )
+
+[global]
+
+resolution=false
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0.603922, 1, 0.972549, 1 )
+environment/default_environment="res://default_env.tres"
